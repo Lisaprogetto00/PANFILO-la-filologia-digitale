@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:geo="http://www.geonames.org/ontology#">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Isola di Arturo </title>
+        <author ref="https://viaf.org/viaf/49228708">Elsa Morante</author>
+        <editor ref="https://orcid.org/0000-0000-0000-0000">Lisa Bagnai</editor>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>PANFILO: la filologia navigabile</publisher>
+        <availability>
+          <licence>© 2025 Lisa Bagnai – uso accademico</licence>
+        </availability>
+        <idno>https://panfilo-lafilologianavigabile.it/fulltext.xml</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          Morante, Elsa. <title>Isola di Arturo</title>. Einaudi, 1957.
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+
+    <encodingDesc>
+      <classDecl>
+        <taxonomy xml:id="temi">
+          <category xml:id="romanzo" scheme="http://vocab.getty.edu/aat/">
+            <catDesc>Romanzo</catDesc>
+          </category>
+          <category xml:id="letteratura-italiana" scheme="https://id.loc.gov/authorities/subjects.html">
+            <catDesc>Letteratura italiana</catDesc>
+          </category>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <p>
+        <seg type="incipit">Nacqui sull’isola di 
+          <placeName ref="https://www.geonames.org/3173157">Procida</placeName>, 
+          che giace nel golfo di Napoli...</seg>
+        <note type="variante">Nel manoscritto, “Procida” è scritto inizialmente “Procita”.</note>
+        <persName ref="https://viaf.org/viaf/49228708">Elsa Morante</persName> 
+        descrive in <title type="work" ref="https://viaf.org/viaf/179445263">L’Isola di Arturo</title> 
+        un universo simbolico legato all’adolescenza e alla libertà.
+      </p>
+    </body>
+  </text>
+</TEI>

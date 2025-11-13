@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nav - Sfoglia opere - PANFILO:ELSA MORANTE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Garamond', serif; padding:20px; }
+    .card { cursor: pointer; }
+    .tag { font-size:0.85em; color:#666; }
+    .topbar { margin-bottom:18px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="d-flex justify-content-between align-items-center mb-3">
+      <h1 class="h3">Sfoglia le opere — PANFILO:ELSA MORANTE</h1>
+      <div>
+        <a class="btn btn-sm btn-outline-secondary" href="../index.html">Torna alla Home</a>
+        <a class="btn btn-sm btn-outline-primary" href="catalogo.html">Catalogo completo</a>
+      </div>
+    </header>
+
+    <!-- Strumenti di accesso (metodi) -->
+    <div class="row topbar">
+      <div class="col-md-6 mb-2">
+        <input id="navSearch" class="form-control" placeholder="Cerca" />
+      </div>
+      <div class="col-md-3 mb-2">
+        <select id="navFilter" class="form-select">
+          <option value="all">Tutte le categorie</option>
+          <option value="romanzo">Romanzo</option>
+        </select>
+      </div>
+      <div class="col-md-3 mb-2 text-end">
+        <button id="clearBtn" class="btn btn-sm btn-outline-danger">Pulisci filtri</button>
+      </div>
+    </div>
+
+    <!-- Lista di item -->
+    <div id="itemsRow" class="row gy-3">
+      <!-- Card: Isola di Arturo -->
+      <div class="col-md-6 item-card" data-title="Isola di Arturo" data-category="romanzo">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Isola di Arturo</h5>
+            <p class="card-text tag">Romanzo •Materiali <a href="../index.html#isola-arturo">Vai alla sezione</a></p>
+            <p class="card-text">Placeholder:descrizione.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: La Storia -->
+      <div class="col-md-6 item-card" data-title="La Storia" data-category="romanzo">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">La Storia</h5>
+            <p class="card-text tag">Romanzo • <a href="../index.html#la-storia">Vai alla sezione</a></p>
+            <p class="card-text">Placeholder:descrizione.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Menzogna e Sortilegio -->
+      <div class="col-md-6 item-card" data-title="Menzogna e Sortilegio" data-category="raccolta">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Menzogna e Sortilegio</h5>
+            <p class="card-text tag">Romanzo • <a href="../index.html#menzogna-sortilegio">Vai alla sezione</a></p>
+            <p class="card-text">Placeholder:descrizione.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: Aracoeli -->
+      <div class="col-md-6 item-card" data-title="Aracoeli" data-category="romanzo">
+        <div class="card p-3">
+          <div class="card-body">
+            <h5 class="card-title">Aracoeli</h5>
+            <p class="card-text tag">Romanzo • <a href="../index.html#aracoeli">Vai alla sezione</a></p>
+            <p class="card-text">Placeholder:descrizione.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Riferimenti
+    const search = document.getElementById('navSearch');
+    const filter = document.getElementById('navFilter');
+    const itemsRow = document.getElementById('itemsRow');
+    const items = Array.from(document.querySelectorAll('.item-card'));
+    const clearBtn = document.getElementById('clearBtn');
+
+    function applyFilters() {
+      const q = search.value.trim().toLowerCase();
+      const cat = filter.value;
+      items.forEach(card => {
+        const title = card.dataset.title.toLowerCase();
+        const category = card.dataset.category;
+        const matchesQ = title.includes(q);
+        const matchesCat = (cat === 'all') || (category === cat);
+        card.style.display = (matchesQ && matchesCat) ? 'block' : 'none';
+      });
+    }
+
+    search.addEventListener('input', applyFilters);
+    filter.addEventListener('change', applyFilters);
+    clearBtn.addEventListener('click', () => {
+      search.value = '';
+      filter.value = 'all';
+      applyFilters();
+    });
+
+    // Inizializza (mostra tutto)
+    applyFilters();
+  </script>
+</body>
+</html>

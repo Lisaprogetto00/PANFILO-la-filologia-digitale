@@ -1,0 +1,274 @@
+/* === Stili generali === */
+
+body {
+  font-family: 'EB Garamond', Garamond, serif !important;
+}
+
+  font-family: 'Garamond', serif;
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-top: 40px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.8em;
+  color: #7f8c8d;
+}
+
+/* === Immagini === */
+.image-container img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.side-image {
+  width: 20%;
+  margin-top: 40px;
+  border-radius: 8px;
+  position: sticky;
+  top: 20px;
+  float: right;
+}
+
+/* === Navbar === */
+.navbar-nav .nav-link {
+  color: #800000;
+  font-family: 'Garamond', serif;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #b30000;
+}
+
+.navbar-brand {
+  color: #f4a261;
+}
+
+.navbar-brand:hover {
+  color: #f4a261;
+}
+
+/* === Header === */
+header h1 {
+  font-size: 3em;
+  text-align: center;
+  color: #2c3e50;
+}
+
+header p.lead {
+  font-size: 1.6em;
+  text-align: center;
+  color: #555;
+}
+
+/* === Barra di ricerca === */
+.search-container {
+  margin: 30px auto;
+  max-width: 600px;
+}
+
+.search-input {
+  border-radius: 50px;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 1.1em;
+  outline: none;
+}
+
+.search-results {
+  margin-top: 10px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  display: none;
+  padding: 10px;
+}
+
+.search-results a {
+  display: block;
+  padding: 8px;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.search-results a:hover {
+  background: #eaeaea;
+}
+
+/* === Sottosezioni === */
+.subsection {
+  margin-top: 20px;
+}
+
+.subsection h4 {
+  color: #800000;
+  font-size: 1.4em;
+}
+
+.subsection a {
+  text-decoration: none;
+  color: #800000;
+}
+
+.subsection a:hover {
+  text-decoration: underline;
+  color: #b30000;
+}
+
+/* === Tooltip === */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  border-bottom: 1px dotted #800000;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* === Accordion === */
+.accordion {
+  background-color: #f4f0ec;
+  color: #800000;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.1em;
+  transition: background-color 0.2s ease;
+}
+
+.active,
+.accordion:hover {
+  background-color: #e6dcd3;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: #fafafa;
+  overflow: hidden;
+  border-left: 3px solid #800000;
+}
+
+/* === Modal (immagini ingrandite) === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* === Sezione Siti web Correlati === */
+#siti-correlati {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+}
+
+#siti-correlati ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#siti-correlati li {
+  margin-bottom: 10px;
+}
+
+#siti-correlati a {
+  color: #800000;
+  text-decoration: none;
+  font-style: italic;
+}
+
+#siti-correlati a:hover {
+  text-decoration: underline;
+  color: #b30000;
+}
+
+/* === Carousel === */
+.carousel {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+.carousel-img {
+  height: 400px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+}
